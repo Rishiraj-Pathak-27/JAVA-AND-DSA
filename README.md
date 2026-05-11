@@ -64,7 +64,8 @@ Whether you're a beginner or preparing for interviews, this repo will help you s
 │       ├── ☕ sequenceAssignmentQueries.class
 │       └── ☕ sequenceAssignmentQueries.java
 ├── 📁 JavaInterviewQuestions
-│   └── 📝 java.md
+│   ├── 📝 java.md
+│   └── 📝 stringInterning.md
 ├── 📁 OOPS
 │   ├── 📁 AbstractClass
 │   │   ├── ☕ Department.class
@@ -177,43 +178,180 @@ Whether you're a beginner or preparing for interviews, this repo will help you s
 │   │   ├── ☕ fizzBuzz.java
 │   │   ├── ☕ moveAllZerosToEnd.class
 │   │   ├── ☕ moveAllZerosToEnd.java
+│   │   ├── ☕ perfectValidSquare.class
+│   │   ├── ☕ perfectValidSquare.java
 │   │   ├── ☕ reverseInGroups.class
 │   │   ├── ☕ reverseInGroups.java
 │   │   ├── ☕ twoSum.class
 │   │   └── ☕ twoSum.java
+│   ├── 📁 hackerRank
 │   └── 📁 leetcode
+│       ├── ☕ SpiralMatrixII.class
+│       ├── ☕ SpiralMatrixII.java
 │       ├── ☕ buySellStock.class
 │       ├── ☕ buySellStock.java
 │       ├── ☕ buySellStockTwo.class
 │       ├── ☕ buySellStockTwo.java
+│       ├── ☕ countDigits.class
+│       ├── ☕ countDigits.java
+│       ├── ☕ countPrimes.class
+│       ├── ☕ countPrimes.java
 │       ├── ☕ fibonnaciNumber.class
 │       ├── ☕ fibonnaciNumber.java
 │       ├── ☕ findDuplicate.class
 │       ├── ☕ findDuplicate.java
+│       ├── ☕ findIdxOfFirstChar.class
+│       ├── ☕ findIdxOfFirstChar.java
+│       ├── ☕ findTheDiff.class
+│       ├── ☕ findTheDiff.java
 │       ├── ☕ firstAndLastPosition.class
 │       ├── ☕ firstAndLastPosition.java
+│       ├── ☕ fizzBuzz.class
+│       ├── ☕ fizzBuzz.java
 │       ├── ☕ intersectionTwoArraysTwo.class
 │       ├── ☕ intersectionTwoArraysTwo.java
+│       ├── ☕ jewelsAndStones.class
+│       ├── ☕ jewelsAndStones.java
+│       ├── ☕ longestCommonPrefix.class
+│       ├── ☕ longestCommonPrefix.java
+│       ├── ☕ longestPalindromicSubstring.class
+│       ├── ☕ longestPalindromicSubstring.java
 │       ├── ☕ majorityElement.class
 │       ├── ☕ majorityElement.java
+│       ├── ☕ maxProductSubarray.class
+│       ├── ☕ maxProductSubarray.java
 │       ├── ☕ medianOfTwoSorted.class
 │       ├── ☕ medianOfTwoSorted.java
 │       ├── ☕ mergeSortedArrays.class
 │       ├── ☕ mergeSortedArrays.java
+│       ├── ☕ mirrorDistanceOfInteger.class
+│       ├── ☕ mirrorDistanceOfInteger.java
 │       ├── ☕ missingNumber.class
 │       ├── ☕ missingNumber.java
 │       ├── ☕ moveAllZerosToEnd.java
+│       ├── ☕ nonRepeatingChar.class
+│       ├── ☕ nonRepeatingChar.java
+│       ├── ☕ numberOfSegments.class
+│       ├── ☕ numberOfSegments.java
+│       ├── ☕ palindromicSubStrings.class
+│       ├── ☕ palindromicSubStrings.java
+│       ├── ☕ perfectValidSquare.class
+│       ├── ☕ perfectValidSquare.java
 │       ├── ☕ removeElements.class
 │       ├── ☕ removeElements.java
+│       ├── ☕ reverseStrings.java
+│       ├── ☕ reverseWordLetters.class
+│       ├── ☕ reverseWordLetters.java
+│       ├── ☕ reverseWords.class
+│       ├── ☕ reverseWords.java
+│       ├── ☕ robotOrigin.class
+│       ├── ☕ robotOrigin.java
 │       ├── ☕ rotateArrayRight.java
+│       ├── ☕ rotateString.class
+│       ├── ☕ rotateString.java
 │       ├── ☕ singleNumber.class
 │       ├── ☕ singleNumber.java
 │       ├── ☕ sortColors.class
 │       ├── ☕ sortColors.java
+│       ├── ☕ spiralMatrixII.java
 │       ├── ☕ targetIndicesAfterSorting.class
 │       ├── ☕ targetIndicesAfterSorting.java
+│       ├── ☕ titleCase.class
+│       ├── ☕ titleCase.java
 │       ├── ☕ twoSum.class
-│       └── ☕ twoSum.java
+│       ├── ☕ twoSum.java
+│       ├── ☕ validAnagrams.class
+│       ├── ☕ validAnagrams.java
+│       ├── ☕ validPalindrome.class
+│       └── ☕ validPalindrome.java
+├── 📁 Strings
+│   ├── 📁 PassByValue
+│   │   ├── ☕ passByValue.class
+│   │   └── ☕ passByValue.java
+│   ├── 📁 StringBuilder
+│   │   ├── 📁 BuiltinMethods
+│   │   │   ├── ☕ BuiltIn.class
+│   │   │   └── ☕ BuiltIn.java
+│   │   ├── ☕ basics.class
+│   │   └── ☕ basics.java
+│   ├── 📁 builtInMethods
+│   │   ├── ☕ methods.class
+│   │   └── ☕ methods.java
+│   ├── 📁 interningAndNew
+│   │   ├── ☕ interning.class
+│   │   ├── ☕ interning.java
+│   │   └── 📝 stringInterning.md
+│   ├── 📁 questions
+│   │   ├── ☕ allSubstrings.class
+│   │   ├── ☕ allSubstrings.java
+│   │   ├── ☕ checkPalindrome.class
+│   │   ├── ☕ checkPalindrome.java
+│   │   ├── ☕ compressStrings.class
+│   │   ├── ☕ compressStrings.java
+│   │   ├── ☕ convertLowToUpp.class
+│   │   ├── ☕ convertLowToUpp.java
+│   │   ├── ☕ countConsonents.class
+│   │   ├── ☕ countConsonents.java
+│   │   ├── ☕ countDigits.class
+│   │   ├── ☕ countDigits.java
+│   │   ├── ☕ countDigitsIntToStr.class
+│   │   ├── ☕ countDigitsIntToStr.java
+│   │   ├── ☕ countFreq.class
+│   │   ├── ☕ countFreq.java
+│   │   ├── ☕ countVowels.class
+│   │   ├── ☕ countVowels.java
+│   │   ├── ☕ findIdxOfFirstChar.class
+│   │   ├── ☕ findIdxOfFirstChar.java
+│   │   ├── ☕ findTheDiff.class
+│   │   ├── ☕ findTheDiff.java
+│   │   ├── ☕ fizzBuzz.class
+│   │   ├── ☕ fizzBuzz.java
+│   │   ├── ☕ longestPalindromicSubstring.class
+│   │   ├── ☕ longestPalindromicSubstring.java
+│   │   ├── ☕ longestWord.class
+│   │   ├── ☕ longestWord.java
+│   │   ├── ☕ mostFreqChar.class
+│   │   ├── ☕ mostFreqChar.java
+│   │   ├── ☕ nonRepeatingChar.class
+│   │   ├── ☕ nonRepeatingChar.java
+│   │   ├── ☕ numberOfSegments.class
+│   │   ├── ☕ numberOfSegments.java
+│   │   ├── ☕ removeDuplicateChar.class
+│   │   ├── ☕ removeDuplicateChar.java
+│   │   ├── ☕ removeExtraSpaces.class
+│   │   ├── ☕ removeExtraSpaces.java
+│   │   ├── ☕ removeWhitespaces.class
+│   │   ├── ☕ removeWhitespaces.java
+│   │   ├── ☕ replaceVowelsByAsterisk.class
+│   │   ├── ☕ replaceVowelsByAsterisk.java
+│   │   ├── ☕ reverseCharArr.class
+│   │   ├── ☕ reverseCharArr.java
+│   │   ├── ☕ reverseString.class
+│   │   ├── ☕ reverseString.java
+│   │   ├── ☕ reverseVowelsString.class
+│   │   ├── ☕ reverseVowelsString.java
+│   │   ├── ☕ reverseWordLetters.class
+│   │   ├── ☕ reverseWordLetters.java
+│   │   ├── ☕ reverseWords.class
+│   │   ├── ☕ reverseWords.java
+│   │   ├── ☕ rotateString.class
+│   │   ├── ☕ rotateString.java
+│   │   ├── ☕ shortestWord.class
+│   │   ├── ☕ shortestWord.java
+│   │   ├── ☕ sumOfAllSubs.class
+│   │   ├── ☕ sumOfAllSubs.java
+│   │   ├── ☕ titleCase.class
+│   │   ├── ☕ titleCase.java
+│   │   ├── ☕ toggleChars.class
+│   │   ├── ☕ toggleChars.java
+│   │   ├── ☕ totalPalindromicSubStrings.class
+│   │   ├── ☕ totalPalindromicSubStrings.java
+│   │   ├── ☕ validAnagrams.class
+│   │   └── ☕ validAnagrams.java
+│   ├── ☕ str.class
+│   ├── ☕ str.java
+│   ├── ☕ stringBasics.class
+│   └── ☕ stringBasics.java
 ├── 📁 TwoDArrays
 │   ├── 📁 TwoDArrayList
 │   │   ├── ☕ TwoDArrayList.class
@@ -466,6 +604,8 @@ Whether you're a beginner or preparing for interviews, this repo will help you s
 │   │   ├── ☕ linearSearch.java
 │   │   ├── ☕ max.class
 │   │   ├── ☕ max.java
+│   │   ├── ☕ maxProductSubarray.class
+│   │   ├── ☕ maxProductSubarray.java
 │   │   ├── ☕ mergeArrays.class
 │   │   ├── ☕ mergeArrays.java
 │   │   ├── ☕ mergeSort.class
@@ -612,9 +752,6 @@ Whether you're a beginner or preparing for interviews, this repo will help you s
 │   │   └── ☕ relational.java
 │   ├── ☕ expression.class
 │   └── ☕ expression.java
-├── 📁 strings
-│   ├── ☕ str.class
-│   └── ☕ str.java
 ├── 📁 userInput
 │   ├── ☕ ui.class
 │   └── ☕ ui.java
