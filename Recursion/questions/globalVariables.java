@@ -1,3 +1,4 @@
+package questions;
 public class globalVariables {
     static int c=10;
     public static void main(String[] args){ 
