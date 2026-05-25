@@ -24,7 +24,7 @@ public class nonRepeatedDigits {
                 if(visited[rem]){
                     break;
                 }
-                    visited[rem] = true;
+                visited[rem] = true;
                     num/=10;
                 if(num==0){
                     count++;
