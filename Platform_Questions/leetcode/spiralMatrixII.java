@@ -1,5 +1,3 @@
-
-
 public class SpiralMatrixII {
     public int[][] generateMatrix(int n) {
        int fr=0, fc=0, lr=n-1, lc=n-1;
@@ -35,7 +33,7 @@ public class SpiralMatrixII {
        return res;
     }
     public static void main(String[] args){
-        int n = 3;
+        int n = 5;
         SpiralMatrixII sm = new SpiralMatrixII();
         int[][] matrix = sm.generateMatrix(n);
         for (int i = 0; i < matrix.length; i++) {
