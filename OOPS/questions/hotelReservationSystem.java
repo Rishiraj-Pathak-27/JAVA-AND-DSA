@@ -3,7 +3,6 @@
 // Find the guest with the highest bill and display a detailed reservation summary
 
 import java.util.Scanner;
-
 class Guest {
 
     String guestId;
@@ -47,7 +46,6 @@ class Reservation extends Guest {
 }
 
 public class hotelReservationSystem {
-
     public static void main(String[] args) {
 
         Scanner ip = new Scanner(System.in);
@@ -107,9 +105,7 @@ public class hotelReservationSystem {
         if (maxIdx != -1) {
             rev[maxIdx].display();
         } else {
-            for(int i=0; i<n; i++){
-                rev[i].display();
-            }
+           System.out.println("No Reservations Available!");
         }
     }
 }
