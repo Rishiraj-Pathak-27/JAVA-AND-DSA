@@ -108,6 +108,7 @@ public class onlineCourseLearningPlatform{
             String name = ip.nextLine();
             System.out.println("Enter student age = ");
             int age = ip.nextInt();
+            ip.nextLine();
             System.out.println("Enter student email = ");
             String email = ip.nextLine();
             System.out.println("Enter course id = ");
@@ -118,6 +119,7 @@ public class onlineCourseLearningPlatform{
             String courseInstName = ip.nextLine();
             System.out.println("Enter course duration =  ");
             int duration = ip.nextInt();
+            ip.nextLine();
             System.out.println("Enter total courses completed = ");
             int f = ip.nextInt();
             ip.nextLine();
