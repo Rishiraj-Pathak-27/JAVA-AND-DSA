@@ -58,16 +58,16 @@ class Inventory extends Product {
     }
 
     // search product by category
-    void prodSearch(Inventory[] inv, String searchItem){
+    void prodSearch(Inventory[] inv, String searchItem) {
         boolean isFound = false;
 
-        for(Inventory ele:inv){
-            if(ele.getCategory().equalsIgnoreCase(searchItem)){
+        for (Inventory ele : inv) {
+            if (ele.getCategory().equalsIgnoreCase(searchItem)) {
                 ele.display();
                 isFound = true;
             }
         }
-        if(!isFound){
+        if (!isFound) {
             System.out.println("No Item Found of this Category");
         }
     }
@@ -116,6 +116,17 @@ public class inventoryManagementSystem {
                 System.out.printf("The Product having Product Id = %s is out of stock\n", ele.getId());
                 System.out.println("The Total Product valuation = " + total);
                 System.out.println();
+
+                // low stock functionality
+                } else if(ele.getQuantity() < 10){
+                    total += ele.getPrice() * ele.getQuantity();
+                    totalVal += ele.getPrice() * ele.getQuantity();
+                    ele.display();
+                    System.out.printf("The Product having Product Id = %s has low stock\n", ele.getId());
+                    System.out.println("The Total Product valuation = " + total);
+                    System.out.println();
+
+                    // normal display
             } else {
                 total += ele.getPrice() * ele.getQuantity();
                 totalVal += ele.getPrice() * ele.getQuantity();
@@ -124,27 +135,22 @@ public class inventoryManagementSystem {
                 System.out.println();
             }
         }
-        System.out.println("Total Value of Inventory = "+totalVal);
+        System.out.println("Total Value of Inventory = " + totalVal);
 
         System.out.println();
 
         System.out.println("----------Search By Category------------");
 
         // search by category functionality
-        for(int i=0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             System.out.println("Enter the category: ");
             String category = ip.nextLine();
 
-            if(n>0){
+            if (n > 0) {
                 inv[i].prodSearch(inv, category);
-            }else{
+            } else {
                 System.out.println("Product of this category not found");
             }
-            
         }
-
-
-
-        
     }
 }
