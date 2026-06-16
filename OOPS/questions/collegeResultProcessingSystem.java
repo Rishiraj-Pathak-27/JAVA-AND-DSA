@@ -73,8 +73,8 @@ class Student {
         }
     }
 
-    boolean isFailed(double percentage, String grade, int total) {
-        if (percentage <= 35 && grade.equals("F") && total <= 125) {
+    boolean isFailed() {
+        if (calculatePercentage() <= 35 && calculateGrade().equals("F") && calculateTotal() <= 125) {
             return true;
         }
         return false;
@@ -82,6 +82,45 @@ class Student {
 }
 
 class Result {
+
+    private Student[] students;
+
+    Result(Student[] students) {
+        this.students = students;
+    }
+
+    // find topper function
+    void getTopper() {
+        Student topper = students[0];
+
+        for (Student stu : students) {
+            if (stu.calculateTotal() > topper.calculateTotal()) {
+                topper = stu;
+            }
+        }
+        System.out.println("Topper Details: ");
+        topper.display();
+    }
+
+    // failed students list 
+    String failedStudents() {
+        for (Student stu : students) {
+            if (stu.isFailed()) {
+                return stu.getName();
+            }
+        }
+        return "No students failed";
+    }
+
+    // passed students list
+    String passedStudents() {
+        for (Student stu : students) {
+            if (!(stu.isFailed())) {
+                return stu.getName();
+            }
+        }
+        return "No Students Passed";
+    }
 
 }
 
@@ -131,6 +170,16 @@ public class collegeResultProcessingSystem {
             System.out.println();
         }
 
-        //
+        Result res = new Result(student);
+
+        System.out.println("----Topper Student----");
+        res.getTopper();
+
+        System.out.println("----Passed Students----");
+        System.out.println(res.passedStudents());
+
+        System.out.println("----Failed Students----");
+        System.out.println(res.failedStudents());
+
     }
 }
