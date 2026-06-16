@@ -103,23 +103,32 @@ class Result {
     }
 
     // failed students list 
-    String failedStudents() {
+    void failedStudents() {
+        boolean isFailed = false;
         for (Student stu : students) {
             if (stu.isFailed()) {
-                return stu.getName();
+                isFailed = true;
+                System.out.println(stu.getName());
             }
         }
-        return "No students failed";
+        if (!isFailed) {
+            System.out.println("No students failed");
+        }
     }
 
     // passed students list
-    String passedStudents() {
+    void passedStudents() {
+        boolean isPassed = false;
         for (Student stu : students) {
+
             if (!(stu.isFailed())) {
-                return stu.getName();
+                System.out.println(stu.getName());
+                isPassed = true;
             }
         }
-        return "No Students Passed";
+        if (!isPassed) {
+            System.out.println("No Students Passed");
+        }
     }
 
 }
@@ -176,10 +185,10 @@ public class collegeResultProcessingSystem {
         res.getTopper();
 
         System.out.println("----Passed Students----");
-        System.out.println(res.passedStudents());
+        res.passedStudents();
 
         System.out.println("----Failed Students----");
-        System.out.println(res.failedStudents());
+        res.failedStudents();
 
     }
 }
