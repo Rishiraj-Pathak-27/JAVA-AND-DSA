@@ -6,10 +6,24 @@ public class stringWithSpecialOpI{
 
         for(char ch : str.toCharArray()){
 
-            if(ch >= 'a' && ch <= 'z') ans.append(ch);
-            else if(ch == '#') ans.append(ans.charAt(ans.length()-1));
-            else if(ch == '%') ans.reverse();
-            else if(ch == '*') ans.deleteCharAt(ans.length()-1);
+            if(ch >= 'a' && ch <= 'z') {
+                ans.append(ch);
+            }
+            else if(ch == '#') {
+                if(ans.length()>0){
+                ans.append(ans);
+                }
+            }
+            else if(ch == '%') {
+                if(ans.length()>0){
+                ans.reverse();
+                }
+            }
+            else if(ch == '*') {
+                if(ans.length()>0){
+                ans.deleteCharAt(ans.length()-1);
+                }
+            }
             else ans.append(" ");
         }
         return ans.toString();
