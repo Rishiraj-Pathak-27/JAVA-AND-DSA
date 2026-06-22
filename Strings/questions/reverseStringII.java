@@ -15,7 +15,7 @@ public class reverseStringII {
         int reversePoint = 2*k;
         char[] arr = s.toCharArray();
         int n=s.length();
-        for(int i=0; i<s.length(); i+=reversePoint){
+        for(int i=0; i<n; i+=reversePoint){
 
             int left = i;
             int right = Math.min(i+k-1,n-1);
