@@ -43,7 +43,7 @@ public class lonelyNumbersArray {
 
         List<Integer> ans = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            if (res[arr[i]] == 1 && res[arr[i] - 1] == 0 && res[arr[i] + 1] == 0) {
+            if (res[arr[i]] == 1 && (arr[i] == 0 || res[arr[i] - 1] == 0) && res[arr[i] + 1] == 0) {
                 ans.add(arr[i]);
             }
         }
