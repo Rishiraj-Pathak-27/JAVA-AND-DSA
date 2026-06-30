@@ -1,3 +1,4 @@
 {
-    "a-file-icon-vscode.arrowTheme": "material"
+    "a-file-icon-vscode.arrowTheme": "material",
+    "color-blocks.behavior.enabled": false
 }
