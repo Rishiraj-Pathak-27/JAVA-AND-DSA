@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 public class ThreeSum{
     public static void main(String[] args) {
-        int[] arr = {0,1,1};
+        int[] arr = {-1,0,1,2,-1,-4};
         System.out.println(tripletSum(arr));
 
     }
@@ -22,7 +22,7 @@ public class ThreeSum{
             int j=i+1;
             int k=n-1;
 
-            // duplicate checking condition
+            // duplicate checking condition before 'i'
             if(i>0 && arr[i]==arr[i-1]){
                 continue;
             }
@@ -40,13 +40,19 @@ public class ThreeSum{
                 }else{
                     ans.add(List.of(arr[i],arr[j],arr[k]));
                     j++;
-                }
-            }
+                    k--;
 
-            // skip any duplicate element from arr
-            // while(arr[j] == arr[j-1] && j<k){
-            //     j++;
-            // }
+                    // check for duplicate element before 'j'
+                    while(j<k && arr[j]==arr[j-1]){
+                        j++;
+                    }
+
+                    // check for duplicate element after 'k'
+                    while(j<k && arr[k]==arr[k+1]){
+                        k--;
+                    }
+                }
+            }        
         }
         return ans;
     }

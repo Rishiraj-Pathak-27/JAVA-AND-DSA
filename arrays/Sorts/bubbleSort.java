@@ -113,52 +113,52 @@ public class bubbleSort{
 // Here we are checking that the array is swapping elements or not, if not we are assuming that array is sorted else we will continue.
 // Here, TC = O(n^2) & SC = O(1), but with less no. of operations
 
-// public class bubbleSort{
-//     public static void print(int[] arr){
-//         for(int ele : arr){
-//             System.out.print(ele+", ");
-//         }
-//         System.out.println();
-//     }
+public class bubbleSort{
+    public static void print(int[] arr){
+        for(int ele : arr){
+            System.out.print(ele+", ");
+        }
+        System.out.println();
+    }
 
-//     public static void bubbleSortFunction(int[] arr){
-//         int n=arr.length;
+    public static void bubbleSortFunction(int[] arr){
+        int n=arr.length;
         
-//         print(arr);
+        print(arr);
         
-//         for(int i=0; i<n-1; i++){
-//             int swaps =0;
-//             for(int j=0; j<n-1-i; j++){
-//                 if(arr[j]>arr[j+1]){
-//                     int temp = arr[j];
-//                     arr[j] = arr[j+1];
-//                     arr[j+1] = temp;
-//                     swaps++;
-//                 }
-//             }
-//             if(swaps==0) break;
-//         }
+        for(int i=0; i<n-1; i++){
+            int swaps =0;
+            for(int j=0; j<n-1-i; j++){
+                if(arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                    swaps++;
+                }
+            }
+            if(swaps==0) break;
+        }
 
-//         // OR using boolean but it takes more space than integer
+        // OR using boolean but it takes more space than integer
 
-//         // boolean isSorted = true;
+        // boolean isSorted = true;
 
-//         // for(int i=0; i<n-1; i++){
+        // for(int i=0; i<n-1; i++){
 
-//         //     for(int k=0; k<n-1; k++){
-//         //         if(arr[k]>arr[k+1]){
-//         //             isSorted = false;
-//         //             break;
-//         //         }
-//         //     }
-//         //     if(isSorted) break;
-//         // }
+        //     for(int k=0; k<n-1; k++){
+        //         if(arr[k]>arr[k+1]){
+        //             isSorted = false;
+        //             break;
+        //         }
+        //     }
+        //     if(isSorted) break;
+        // }
 
-//         print(arr);
-//     }
+        print(arr);
+    }
 
-//     public static void main(String[] args){
-//         int[] arr = {5,2,-9,3,2,4,-10,0};
-//         bubbleSortFunction(arr);
-//     }
-// }
+    public static void main(String[] args){
+        int[] arr = {5,2,-9,3,2,4,-10,0};
+        bubbleSortFunction(arr);
+    }
+}

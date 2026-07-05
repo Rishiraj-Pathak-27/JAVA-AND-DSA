@@ -18,14 +18,17 @@ public class ThreeSum{
 
         List<List<Integer>> ans = new ArrayList<>();
 
-        for(int i=0; i<n-1; i++){
+        for(int i=0; i<n-3; i++){
             
             int j=i+1;
             int k=n-1;
 
+            // duplicate checking condition before 'i'
             if(i>0 && arr[i]==arr[i-1]){
                 continue;
             }
+
+            //sliding window execution based on 3 conditions
 
             while(j<k){
                 int total = arr[i]+arr[j]+arr[k];
@@ -37,11 +40,18 @@ public class ThreeSum{
                 }else{
                     ans.add(List.of(arr[i],arr[j],arr[k]));
                     j++;
-                }
-            }
+                    k--;
 
-            while(arr[j]==arr[j-1] && j<k){
-                j++;
+                    // check for duplicate element before 'j'
+                    while(j<k && arr[j]==arr[j-1]){
+                        j++;
+                    }
+
+                    // check for duplicate element after 'k'
+                    while(j<k && arr[k]==arr[k+1]){
+                        k--;
+                    }
+                }
             }
         }
         return ans;
