@@ -38,8 +38,6 @@
 // }
 
 // Approach 2 (O(N))
-
-import java.util.Arrays;
 public class maxPairSum{
     public static void main(String[] args) {
         int[] arr = {2536, 1613, 3366, 162};
@@ -59,11 +57,10 @@ public class maxPairSum{
     public static int maxSum(int[] arr){
         int ans=-1;
         int[] temp=new int[10];
-        Arrays.fill(temp,-1);
 
         for(int ele:arr){
             int maxDigit=max(ele);
-            if(temp[maxDigit]!=-1){
+            if(temp[maxDigit]>0){
                 ans = Math.max(ans,temp[maxDigit]+ele);
             }
             temp[maxDigit] = Math.max(temp[maxDigit],ele);
