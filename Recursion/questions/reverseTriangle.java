@@ -27,7 +27,7 @@
 
 public class reverseTriangle{
     public static void main(String[] args) {
-        int n=10;
+        int n=4;
         print(n,n,1);
     }
 

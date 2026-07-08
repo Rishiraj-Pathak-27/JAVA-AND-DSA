@@ -24,6 +24,7 @@
 //         return true;
 //     }
 // }
+
 // Recursive Approach
 public class primeNumber {
 
