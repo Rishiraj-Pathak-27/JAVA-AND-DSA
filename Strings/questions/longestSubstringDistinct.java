@@ -7,23 +7,17 @@
 
     public static int longestSubstring(String s){
         char[] arr = s.toCharArray();
-
         int n=arr.length;
-
         int max=0;
 
         int[] temp = new int[128];
-
         int left=0;
 
         for(int right=0; right<n; right++){
-
             char currChar = arr[right];
-
+            
             if(temp[currChar] > left){
-
                 left = temp[currChar];
-
             }
 
             temp[currChar] = right+1;
