@@ -28,22 +28,22 @@ public class maxSumSubarray {
         int max=sum;
 
         // used to sub the recent lefting element -> move the window -> add the adding element to window
-        // while(right<n-1){
-        //     sum-=arr[left];
-        //     left++;
-        //     right++;
-        //     sum+=arr[right];
-        //     max=Math.max(max,sum);
-        // }
-        // return max;
-
-        // OR
-        
-        for(int i=k; i<right-1; i++){
+        while(right<n-1){
             sum-=arr[left];
+            left++;
+            right++;
             sum+=arr[right];
             max=Math.max(max,sum);
         }
+        return max;
+
+        // OR
+        
+        // for(int i=k; i<right-1; i++){
+        //     sum-=arr[left];
+        //     sum+=arr[right];
+        //     max=Math.max(max,sum);
+        // }
         return max;
     }
 }
