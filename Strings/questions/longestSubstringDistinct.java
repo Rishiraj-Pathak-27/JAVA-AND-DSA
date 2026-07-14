@@ -1,4 +1,5 @@
 // Given a string s, find the length of the longest substring without duplicate characters.
+
  public class longestSubstringDistinct{
     public static void main(String[] args) {
         String s = "abcabcbb";
