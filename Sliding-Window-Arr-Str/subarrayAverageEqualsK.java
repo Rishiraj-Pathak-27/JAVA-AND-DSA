@@ -13,7 +13,6 @@ public class subarrayAverageEqualsK{
         int n=arr.length;
         int left=0;
         int sum=0;
-        int avg=0;
 
         int[] ans=new int[n-k+1];
 
