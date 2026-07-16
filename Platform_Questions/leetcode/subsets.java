@@ -1,5 +1,7 @@
 // 78. Subsets
 
+// Best Recursive Approach to find out subsets
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,14 +25,14 @@ public class subsets{
         int n=arr.length;
 
         if(n==idx){
-            list.add(new ArrayList<>(ans));
+            list.add(new ArrayList<>(ans)); // copy created to store the complete list of ans size in 2D list 
             return;
         }
 
-        ans.add(arr[idx]);
+        ans.add(arr[idx]);  // adding elements to list
 
         helper(ans,arr,idx+1,list);
-        ans.remove(ans.size()-1);
+        ans.remove(ans.size()-1);   // remove the last choice and another call explores the remaining elements
         helper(ans,arr,idx+1,list);
 
     }
