@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class generateParentheses{
     public static void main(String[] args) {
-        int n=4;
+        int n=3;
         System.out.println(generate(n));
     }
 
