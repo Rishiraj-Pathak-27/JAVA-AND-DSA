@@ -10,11 +10,14 @@ public class binarySearch{
 
     public static int helper(int[] arr, int target, int left, int right){
         if(left>right) return -1;
-
+        // calculate mid
         int mid=left+(right-left)/2;
+
         if(arr[mid]==target) return mid;
+
         // if greater then shrink till mid-1
         else if(arr[mid]>target) return helper(arr,target,left,right-1);
+        
         // if smaller then shrink till mid+1
         else return helper(arr,target,left+1,right);
     }
