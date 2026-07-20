@@ -5,30 +5,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class subsets{
-    public static void main(String[] args) {
+    public static void main(String[] args){
         int[] arr = {1,2,3};
-        System.out.println(subsetsPrint(arr));
-        
+        System.out.println(subsequences(arr));
     }
-    
-    public static List<List<Integer>> subsetsPrint(int[] arr){
 
-        List<List<Integer>> list = new ArrayList<>();
-        List<Integer> ans = new ArrayList<>();
-        helper(ans,arr,0,list);
-        return list;
-    }
-    public static void helper(List<Integer> ans, int[] arr, int idx, List<List<Integer>> list){
-        int n = arr.length;
+    public static void helper(List<Integer> res, int[] arr, int idx, List<List<Integer>> ans){
+        int n=arr.length;
 
-        if(n==idx) {
-            list.add(new ArrayList<>(ans));
+        if(idx==n){
+            ans.add(new ArrayList<>(res));
             return;
         }
 
-        ans.add(arr[idx]);
-        helper(ans,arr,idx+1,list);
-        ans.remove(ans.size()-1);
-        helper(ans,arr,idx+1,list);
+        res.add(arr[idx]);
+        helper(res,arr,idx+1,ans);
+        res.remove(res.size()-1);
+        helper(res,arr,idx+1,ans);
+    }
+
+    public static List<List<Integer>> subsequences(int[] arr){
+        List<List<Integer>> ans = new ArrayList<>();
+        List<Integer> res = new ArrayList<>();
+
+        helper(res,arr,0,ans);
+        return ans;
     }
 }
