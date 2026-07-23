@@ -169,9 +169,10 @@ public class satelliteDataStream{
                     int size=(right-left+1)/2;
 
                     if(isValid(temp,size)){
-
+                        // corresponding weights addition
                         int sum=weightSum(weight,left,right);
 
+                        // max sum storing through weighted sum
                         ans=Math.max(ans,sum);
                         
                     }

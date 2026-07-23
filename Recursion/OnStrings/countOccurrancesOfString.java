@@ -1,6 +1,6 @@
 // Count occurrences of a character.
 
-// Using temp[] frequency array
+// Using temp[] frequency array and recursive calls
 
 public class countOccurrancesOfString {
     public static void main(String[] args){
