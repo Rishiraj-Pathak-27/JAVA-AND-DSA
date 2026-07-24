@@ -3,7 +3,7 @@
 public class equalCharacters{
     public static void main(String[] args) {
         String s = "abacbc";
-        equalOccurrances(s);
+        System.out.println(equalOccurrances(s));
     }
 
     public static void freq(char[] arr, int idx, int[] temp){
@@ -16,19 +16,18 @@ public class equalCharacters{
         freq(arr,idx+1,temp);
     }
 
-    public static void print(int[] temp, int idx){
+    public static boolean checkEqual(int[] temp, int idx, int target){
         int n=temp.length;
-        if(n==idx) return;
+        if(n==idx) return true;
 
-        if(temp[idx]>0){
-            
+        if(temp[idx]>0 && temp[idx] != target){
+            return false;
         }
 
-        print(temp,idx+1);
+        return checkEqual(temp,idx+1,target);
     }
 
-    public static void equalOccurrances(String s){
-        int n=s.length();
+    public static boolean equalOccurrances(String s){
         char[] arr = s.toCharArray();
 
         int max=0;
@@ -40,6 +39,8 @@ public class equalCharacters{
         int[] temp = new int[max+1];
 
         freq(arr,0,temp);
-        print(temp,0);
+        
+        int target = temp[arr[0]];
+        return checkEqual(temp,0,target);
     }
 }
