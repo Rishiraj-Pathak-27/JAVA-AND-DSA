@@ -1,6 +1,9 @@
 // 1941. Check if All Characters Have Equal Number of Occurrences
 
 public class equalCharacters{
+
+    public static final int size=26;
+
     public static void main(String[] args) {
         String s = "abacbc";
         System.out.println(equalOccurrances(s));
@@ -11,7 +14,7 @@ public class equalCharacters{
 
         if(n==idx) return;
 
-        temp[arr[idx]]++;
+        temp[arr[idx] - 'a']++;
 
         freq(arr,idx+1,temp);
     }
@@ -30,17 +33,11 @@ public class equalCharacters{
     public static boolean equalOccurrances(String s){
         char[] arr = s.toCharArray();
 
-        int max=0;
-
-        for(int ele:arr){
-            max=Math.max(ele,max);
-        }
-
-        int[] temp = new int[max+1];
+        int[] temp = new int[size];
 
         freq(arr,0,temp);
         
-        int target = temp[arr[0]];
+        int target = temp[arr[0] - 'a'];
         return checkEqual(temp,0,target);
     }
 }
