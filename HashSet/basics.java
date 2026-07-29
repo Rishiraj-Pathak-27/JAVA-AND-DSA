@@ -57,6 +57,7 @@
 
 
 // Iterator Example
+// Iterator is used to iterate over the set like other loops and has various built in methods
 
 import java.util.HashSet;
 import java.util.Iterator;
