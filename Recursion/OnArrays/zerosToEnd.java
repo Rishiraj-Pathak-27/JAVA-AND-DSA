@@ -34,15 +34,21 @@ public class zerosToEnd{
         System.out.println(Arrays.toString(moveZeros(arr,0,0)));
     }
 
+    public static void swap(int[] arr, int idx, int j){
+        arr[idx]=arr[j]-arr[idx];
+        arr[j]=arr[j]-arr[idx];
+        arr[idx]=arr[j]+arr[idx];        
+    }
+
     public static int[] moveZeros(int[] arr, int idx, int j){
         int n=arr.length;
         if(n==idx) return arr;
 
+        
+
 
         if(arr[idx]!=0) {
-            int temp=arr[idx];
-            arr[idx]=arr[j];
-            arr[j]=temp;
+            swap(arr,idx,j);
             j++;
         }
 
