@@ -44,9 +44,6 @@ public class zerosToEnd{
         int n=arr.length;
         if(n==idx) return arr;
 
-        
-
-
         if(arr[idx]!=0) {
             swap(arr,idx,j);
             j++;
