@@ -16,19 +16,25 @@ public class longestSubarrayWithAtmostKFreq {
         int left=0,right=0;
         int max=0;
 
+        // complete array frequency
         for(int i=0; i<n; i++){
             max=Math.max(arr[i],max);
         }
 
         int[] temp = new int[max+1];
+        // max length variable to store the max window with at most freq k
         int maxLen=0;
         while(right<n){
+            // add up the freq till < k
             temp[arr[right]]++;
+            // if freq > k them reduce the freq by 1
             if(temp[arr[right]] > k){
                 temp[arr[left]]--;
+                // move pointer left++
                 left++;
             }
             maxLen=Math.max(maxLen,right-left+1);
+            // move pointer right++ if not freq > k
             right++;
         }
         return maxLen;
