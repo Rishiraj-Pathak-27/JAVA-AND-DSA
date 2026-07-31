@@ -20,7 +20,7 @@ public class subsets{
 
         res.add(arr[idx]);
         helper(res,arr,idx+1,ans);
-        res.remove(res.size()-1);
+        res.remove(res.size()-1);   // backtrack
         helper(res,arr,idx+1,ans);
     }
 

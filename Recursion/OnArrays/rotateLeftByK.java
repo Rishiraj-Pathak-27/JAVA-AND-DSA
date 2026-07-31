@@ -50,7 +50,6 @@ public class rotateLeftByK{
     }
 
     public static int[] reverse(int[] arr, int left, int right){
-        int n=arr.length;
         if(left>=right) return arr;
        if(left<right){
             swap(arr,left,right);
