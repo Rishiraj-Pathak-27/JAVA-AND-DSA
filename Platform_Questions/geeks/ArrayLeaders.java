@@ -1,31 +1,29 @@
-import java.util.*;
-public class ArrayLeaders {
-public static ArrayList<Integer> arrayLeader(ArrayList<Integer> arr){
-           
-    ArrayList<Integer> leaders = new ArrayList<>();
 
-        int n=arr.size();
-        if(n==0) return leaders;
-
-        int rightMax=arr.get(n-1);
-        leaders.add(rightMax);
-
-        for(int i=n-2; i>=0; i--){
-            if(arr.get(i) >= rightMax){
-                rightMax = arr.get(i);
-                leaders.add(rightMax);
-            }
-        }
-        Collections.reverse(leaders);
-        return leaders;
+import java.util.ArrayList;
+import java.util.Collections;
+public class ArrayLeaders{
+    public static void main(String[] args){
+        int[] arr = {16, 19, 4, 3, 8, 3};
+        System.out.println(leaders(arr));
     }
 
-    public static void main(String[] args){
-        ArrayList<Integer> arr = new ArrayList<>();
-        arr.add(51);
-        arr.add(87);
-        
-        ArrayList<Integer> res = arrayLeader(arr);
-        System.out.println("Array Leaders = "+res);
+    public static ArrayList<Integer> leaders(int[] arr){
+        ArrayList<Integer> ans=new ArrayList<>();
+
+        int n=arr.length;
+
+        if(n==0) return ans;
+
+        int rightMax=arr[n-1];
+        ans.add(rightMax);
+
+        for(int i=n-2; i>=0; i--){
+            if(arr[i]>rightMax){
+                rightMax=arr[i];
+                ans.add(rightMax);
+            }
+        }
+        Collections.reverse(ans);
+        return ans;
     }
 }
