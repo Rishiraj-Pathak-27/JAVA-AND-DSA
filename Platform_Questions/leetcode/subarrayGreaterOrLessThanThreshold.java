@@ -15,7 +15,7 @@ public class subarrayGreaterOrLessThanThreshold {
         int sum=0;
 
         while(right<n){
-            sum+=arr[right];
+            sum+=arr[right]; 
 
             if(right-left+1==k){
                 if((sum/k)>=threshold){
