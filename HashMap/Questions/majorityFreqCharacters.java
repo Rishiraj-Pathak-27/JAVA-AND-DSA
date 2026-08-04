@@ -68,11 +68,6 @@ public class majorityFreqCharacters {
                 ans.append(key);
             }
         }
-
-
-
         return ans.toString();
-
-
     }
 }
