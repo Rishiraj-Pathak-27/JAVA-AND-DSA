@@ -49,8 +49,6 @@ public class majorityFreqCharacters {
             }
         }
 
-
-
         // step 3.
 
         int max=0;
