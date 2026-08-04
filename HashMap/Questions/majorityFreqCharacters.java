@@ -15,13 +15,14 @@ public class majorityFreqCharacters {
 
     public static String majorFreq(String s){
         // 1. add all chars into the map
-        // 2. find max freq from map based on value
+        // 2. add freq of all characters in frequency hashmap
         // 3. check if max==map.get(key) sb.append(key);
         
         int n=s.length();
         
         StringBuilder ans = new StringBuilder();
         HashMap<Character,Integer> map = new HashMap<>();
+        HashMap<Integer,Integer> frequency = new HashMap<>();
 
         // step 1.
 
@@ -39,18 +40,33 @@ public class majorityFreqCharacters {
 
         // step 2.
 
-        int max=0;
-
         for(char key : map.keySet()){
-            int freq=map.get(key);
-            max=Math.max(max,freq);
+            int freq = map.get(key);
+            if(frequency.containsKey(freq)){
+                frequency.put(freq,freq+1);
+            }else{
+                frequency.put(freq,1);
+            }
         }
+
+
 
         // step 3.
 
+        int max=0;
+        int maxFreq=0;
+
+        for(int key : frequency.keySet()){
+            int maxCount=frequency.get(key);
+            if(maxCount>max || (max==maxCount && key>maxFreq)){
+                max=maxCount;
+                maxFreq=key;
+            }
+        }
+
         for(char key:map.keySet()){
             int freq=map.get(key);
-            if(freq==max){
+            if(freq==maxFreq){
                 ans.append(key);
             }
         }
