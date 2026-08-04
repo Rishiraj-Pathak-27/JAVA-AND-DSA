@@ -43,7 +43,8 @@ public class majorityFreqCharacters {
         for(char key : map.keySet()){
             int freq = map.get(key);
             if(frequency.containsKey(freq)){
-                frequency.put(freq,freq+1);
+                int freqCount=frequency.get(freq);
+                frequency.put(freq,freqCount+1);
             }else{
                 frequency.put(freq,1);
             }
