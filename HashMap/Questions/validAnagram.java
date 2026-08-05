@@ -14,6 +14,8 @@ public class validAnagram {
         HashMap<Character,Integer> aMap = new HashMap<>();
         HashMap<Character,Integer> bMap = new HashMap<>();
 
+        if(s.length() != t.length()) return false;
+
         for(int i=0; i<s.length(); i++){
             char ch = s.charAt(i);
             if(aMap.containsKey(ch)){
