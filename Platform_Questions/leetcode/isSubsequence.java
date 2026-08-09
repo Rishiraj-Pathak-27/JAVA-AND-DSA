@@ -15,7 +15,13 @@ public class isSubsequence{
         int left=0,right=0;
 
         while(left<n && right<m){
-            if(s.charAt(left)==t.charAt())
+            if(s.charAt(left)==t.charAt(right)){
+                left++;
+            }
+            right++;
         }
+
+        if(left==n) return true;
+        return false;
     }
 }
