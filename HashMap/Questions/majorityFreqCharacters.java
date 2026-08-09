@@ -57,7 +57,7 @@ public class majorityFreqCharacters {
 
         for(int key : frequency.keySet()){
             int maxCount=frequency.get(key);
-            if(maxCount>max || (max==maxCount && key>maxFreq)){
+            if(max<=maxCount && key>maxFreq){
                 max=maxCount;
                 maxFreq=key;
             }
