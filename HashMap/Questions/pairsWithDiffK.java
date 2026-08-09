@@ -1,7 +1,6 @@
 // Given an array arr[] of positive integers. Find the number of pairs of integers whose absolute difference equals to a given number k
 
 import java.util.HashMap;
-
 public class pairsWithDiffK {
     public static void main(String[] args){
         int[] arr = {8, 16, 12, 16, 4, 0};
