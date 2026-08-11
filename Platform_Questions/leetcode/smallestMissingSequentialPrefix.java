@@ -11,7 +11,9 @@ public class smallestMissingSequentialPrefix {
     public static int missingInteger(int[] arr){
         HashSet<Integer> set = new HashSet<>();
         int sum=arr[0];
-        for(int i=1; i<=arr.length; i++){
+        int n=arr.length;
+        
+        for(int i=1; i<n; i++){
             if(arr[i]==(arr[i-1]+1)){
                 sum+=arr[i];
             }else break;
