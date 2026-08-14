@@ -1,7 +1,6 @@
 // 3090. Maximum Length Substring With Two Occurrences
 
 import java.util.HashMap;
-
 public class maxLenSubstringWithTwoOcc{
     public static void main(String[] args){
         String s = "bcbbbcba";
