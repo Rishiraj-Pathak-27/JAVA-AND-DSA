@@ -16,18 +16,18 @@ public class removeMinMaxFromZero {
         int minIdx=0, maxIdx=0;
 
         for(int i=0; i<n; i++){
-            if(arr[i] > arr[maxIdx]) maxIdx=i; // maxIdx=
-            if(arr[i] < arr[minIdx]) minIdx=i;
+            if(arr[i] > arr[maxIdx]) maxIdx=i; // maxIdx=1
+            if(arr[i] < arr[minIdx]) minIdx=i; // minidx=5
         }
 
-        int left=Math.min(maxIdx,minIdx);
-        int right=Math.max(maxIdx,minIdx);
+        int left=Math.min(maxIdx,minIdx);   // left=1
+        int right=Math.max(maxIdx,minIdx);  // right=5
 
-        int fr = right+1;
-        int bck = n-left;
+        int fr = right+1; // 6
+        int bck = n-left; // 7
 
-        int frBck = (left+1) + (n-right);
+        int frBck = (left+1) + (n-right); // 2+3 = 5
         
-        return Math.min(fr,Math.min(bck,frBck));
+        return Math.min(fr,Math.min(bck,frBck)); // (6,5) = 5 <- "ans"
     }
 }
