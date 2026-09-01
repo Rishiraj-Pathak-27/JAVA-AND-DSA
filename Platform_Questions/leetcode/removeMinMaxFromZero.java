@@ -5,9 +5,17 @@
 // A deletion is defined as either removing an element from the front of the array or removing an element from the back of the array.
 // Return the minimum number of deletions it would take to remove both the minimum and maximum element from the array.
 
+import java.util.Scanner;
 public class removeMinMaxFromZero {
     public static void main(String[] args){
-        int[] arr = {2,10,7,5,4,1,8,6};
+        Scanner ip = new Scanner(System.in);
+        int n=ip.nextInt();
+
+        int[] arr = new int[n];
+
+        for(int i=0; i<n; i++){
+            arr[i]=ip.nextInt();
+        }
         System.out.println(removeMinMax(arr));
     }
 
