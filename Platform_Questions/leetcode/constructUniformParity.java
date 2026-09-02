@@ -5,7 +5,6 @@ public class constructUniformParity {
         int[] arr = {2,3};
         System.out.println(uniformArray(arr));
     }
-
     public static boolean uniformArray(int[] arr){
         return true;
     }
