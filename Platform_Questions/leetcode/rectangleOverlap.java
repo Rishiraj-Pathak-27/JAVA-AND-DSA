@@ -1,0 +1,25 @@
+// 836. Rectangle Overlap
+
+// An axis-aligned rectangle is represented as a list [x1, y1, x2, y2], where (x1, y1) is the coordinate of its bottom-left corner, and (x2, y2) is the coordinate of its top-right corner. Its top and bottom edges are parallel to the X-axis, and its left and right edges are parallel to the Y-axis.
+// Two rectangles overlap if the area of their intersection is positive. To be clear, two rectangles that only touch at the corner or edges do not overlap.
+// Given two axis-aligned rectangles rec1 and rec2, return true if they overlap, otherwise return false.
+
+// Method 1
+
+public class rectangleOverlap {
+    public static void main(String[] args){
+        int[] rec1 = {0,0,2,2};
+        int[] rec2 = {1,1,3,3};
+        System.out.println(isRectangleOverlap(rec1,rec2));
+    }
+
+    public static boolean isRectangleOverlap(int[] rec1, int[] rec2){
+        int left = Math.max(rec1[0],rec2[0]);
+        int right = Math.min(rec1[2],rec2[2]);
+
+        int bottom = Math.max(rec1[1],rec2[1]);
+        int top = Math.min(rec1[3],rec2[3]);
+
+        return left<right && bottom<top;
+    }
+}
